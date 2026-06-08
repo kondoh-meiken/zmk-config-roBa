@@ -94,7 +94,7 @@
             bindings = <
 &trans                &kp AMPERSAND  &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                      &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &trans
 &kp GRAVE             &kp DOLLAR     &kp PERCENT  &kp CARET             &trans                 &trans      &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &trans
-&mt LEFT_SHIFT MINUS  &kp EXCL       &kp AT       &kp HASH              &trans                 &trans      &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans     &trans
+&mt LEFT_SHIFT MINUS  &kp EXCL       &kp AT       &kp HASH              &trans                 &trans      &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE   &trans
 &trans                &trans         &trans       &trans                &trans                 &trans      &trans  &trans                                                          &trans
             >;
         };
