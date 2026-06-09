@@ -54,6 +54,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        test {
+            bindings = <&kp B>;
+            key-positions = <18 18 19 20 30 32>;
+        };
     };
 
     macros {
