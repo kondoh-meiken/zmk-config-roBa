@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &mt {
@@ -74,21 +75,22 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            
         };
+
         lt_scroll: lt_scroll {
             compatible = "zmk,behavior-hold-tap";
-
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
-
             bindings = <&mo>, <&kp>;
         };
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             // 追加: スクロールのタップ時間を設定 (20ms)
+
             tap-ms = <20>;
         };
     };
@@ -98,7 +100,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &kp I      &kp O    &lt_to_layer_0 5 P
+&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &kp I      &kp O    &lt_scroll 5 P
 &kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2  &lt 2 SPACE  &lt_to_layer_0 3 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
