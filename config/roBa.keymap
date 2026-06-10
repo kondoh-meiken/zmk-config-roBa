@@ -74,13 +74,22 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-                compatible = "zmk,behavior-sensor-rotate";
-                #sensor-binding-cells = <0>;
-                bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-                // 追加: スクロールのタップ時間を設定 (20ms)
-                tap-ms = <20>;
-            };
+            
+        };
+        lt_scroll: lt_scroll {
+            compatible = "zmk,behavior-hold-tap";
+
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+
+            bindings = <&mo>, <&kp>;
+        };
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            // 追加: スクロールのタップ時間を設定 (20ms)
+            tap-ms = <20>;
         };
     };
 
