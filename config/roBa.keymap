@@ -112,7 +112,7 @@
 
         layer_1 {
             bindings = <
-&bt BT_NXT            &kp AMPERSAND  &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                         &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER      &trans
+&trans                &kp AMPERSAND  &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                         &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER      &trans
 &kp GRAVE             &kp DOLLAR     &kp PERCENT  &kp CARET             &trans                 &trans      &kp TILDE  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &trans
 &mt LEFT_SHIFT MINUS  &kp EXCL       &kp AT       &kp HASH              &trans                 &trans      &trans     &kp SEMICOLON  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &trans
 &trans                &trans         &trans       &trans                &trans                 &trans      &trans     &trans                                                                     &trans
