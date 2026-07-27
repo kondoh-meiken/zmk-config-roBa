@@ -177,7 +177,7 @@
         MAC {
             bindings = <
 &trans  &mac_gui_w  &mac_alt_e  &trans  &trans                               &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans      &trans  &trans  &kp LC(LG(LS(N4)))      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans      &trans  &trans  &kp LS(LG(S))      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans      &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans      &lt 8 LANG2  &trans  &lt 5 LANG1  &trans  &trans                          &trans
             >;
