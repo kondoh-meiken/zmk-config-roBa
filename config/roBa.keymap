@@ -37,6 +37,16 @@
             if-layers = <2 5>;
             then-layer = <9>;
         };
+
+        windows_window {
+            if-layers = <1 8>;
+            then-layer = <10>;
+        };
+
+        mac_window {
+            if-layers = <2 8>;
+            then-layer = <11>;
+        };
     };
 
     combos {
@@ -126,9 +136,6 @@
         mac_alt_e: mac_alt_e {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-
-            // macOS側でControlとCommandを入れ替えているため、
-            // ZMKのControl+QがmacOSではCommand+Qになる。
             bindings = <&kp E>, <&kp LC(Q)>;
             mods = <(MOD_LALT | MOD_RALT)>;
         };
@@ -143,8 +150,6 @@
         mac_gui_w: mac_gui_w {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-
-            // macOS側の入れ替えにより、ZMKのGUI+↑がControl+↑になる。
             bindings = <&kp W>, <&kp LG(UP_ARROW)>;
             mods = <(MOD_LGUI | MOD_RGUI)>;
         };
@@ -177,7 +182,7 @@
         MAC {
             bindings = <
 &trans  &mac_gui_w  &mac_alt_e  &trans  &trans                               &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans      &trans  &trans  &kp LS(LG(S))      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans      &trans  &trans  &kp LS(LG(S))       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans      &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans      &lt 8 LANG2  &trans  &lt 5 LANG1  &trans  &trans                          &trans
             >;
@@ -243,6 +248,24 @@
 &trans  &trans           &trans  &trans       &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans           &trans  &trans       &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans           &trans  &trans       &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        WINDOWS_WINDOW {
+            bindings = <
+&trans  &trans                    &kp LG(UP_ARROW)          &trans                     &trans                      &trans  &trans  &trans  &trans                       &trans
+&trans  &kp LG(LEFT_ARROW)        &kp LG(DOWN_ARROW)        &kp LG(RIGHT_ARROW)         &trans  &trans      &trans  &trans  &kp LG(LC(LEFT_ARROW))        &kp LG(TAB)  &kp LG(LC(RIGHT_ARROW))  &trans
+&trans  &trans                    &trans                    &trans                     &trans  &trans      &trans  &trans  &trans                       &trans       &trans                    &trans
+&trans  &trans                    &trans                    &trans                     &trans  &trans      &trans  &trans                                                       &trans
+            >;
+        };
+
+        MAC_WINDOW {
+            bindings = <
+&trans  &trans                    &kp LC(LA(LG(UP_ARROW)))    &trans                       &trans                        &trans  &trans  &trans  &trans                 &trans
+&trans  &kp LC(LA(LG(LEFT_ARROW)))  &kp LC(LA(LG(DOWN_ARROW)))  &kp LC(LA(LG(RIGHT_ARROW)))  &trans  &trans      &trans  &trans  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans
+&trans  &trans                    &trans                      &trans                       &trans  &trans      &trans  &trans  &trans                 &trans            &trans               &trans
+&trans  &trans                    &trans                      &trans                       &trans  &trans      &trans  &trans                                                &trans
             >;
         };
 
